@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Calendar } from "@/components/ui/calendar";
 import { Wrench, Clock, AlertCircle, CheckCircle, MapPin, TrendingUp, Calendar as CalendarIcon } from "lucide-react";
+import GoogleMap from "@/components/GoogleMap";
 import { useState } from "react";
 
 const MaintenanceEngineerDashboard = () => {
@@ -187,13 +188,16 @@ const MaintenanceEngineerDashboard = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-64 bg-muted rounded-lg flex items-center justify-center border-2 border-dashed border-border">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-muted-foreground">Interactive Priority Map</p>
-                    <p className="text-sm text-muted-foreground">Color-coded by maintenance urgency</p>
-                  </div>
-                </div>
+                <GoogleMap 
+                  locations={[
+                    { id: "1", name: "Junction A-12", lat: 51.5074, lng: -0.1278, status: "attention", assetCount: 8 },
+                    { id: "2", name: "Section B-05", lat: 51.5154, lng: -0.1426, status: "healthy", assetCount: 12 },
+                    { id: "3", name: "Bridge C-08", lat: 51.5034, lng: -0.1195, status: "critical", assetCount: 4 },
+                    { id: "4", name: "Terminal D-15", lat: 51.5194, lng: -0.1344, status: "healthy", assetCount: 15 },
+                    { id: "5", name: "Signal Box F-09", lat: 51.4994, lng: -0.1156, status: "critical", assetCount: 6 },
+                    { id: "6", name: "Platform G-18", lat: 51.5114, lng: -0.1298, status: "attention", assetCount: 11 }
+                  ]} 
+                />
                 <div className="flex items-center gap-4 mt-4 text-sm">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 rounded-full bg-critical"></div>

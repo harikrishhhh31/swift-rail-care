@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, AlertTriangle, CheckCircle, Clock, Camera, FileText } from "lucide-react";
+import GoogleMap from "@/components/GoogleMap";
 import { useState } from "react";
 
 const SiteEngineerDashboard = () => {
@@ -159,7 +160,7 @@ const SiteEngineerDashboard = () => {
               </CardContent>
             </Card>
 
-            {/* Map Placeholder */}
+            {/* Map Integration */}
             <Card className="shadow-card">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -171,13 +172,15 @@ const SiteEngineerDashboard = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="h-64 bg-muted rounded-lg flex items-center justify-center border-2 border-dashed border-border">
-                  <div className="text-center">
-                    <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                    <p className="text-muted-foreground">Interactive Map Integration</p>
-                    <p className="text-sm text-muted-foreground">Mapbox/Google Maps will be integrated here</p>
-                  </div>
-                </div>
+                <GoogleMap 
+                  locations={[
+                    { id: "1", name: "Junction A-12", lat: 51.5074, lng: -0.1278, status: "healthy", assetCount: 8, batch: "BT-2024-001" },
+                    { id: "2", name: "Section B-05", lat: 51.5154, lng: -0.1426, status: "attention", assetCount: 12, batch: "BT-2024-002" },
+                    { id: "3", name: "Bridge C-08", lat: 51.5034, lng: -0.1195, status: "critical", assetCount: 4, batch: "BT-2024-003" },
+                    { id: "4", name: "Terminal D-15", lat: 51.5194, lng: -0.1344, status: "healthy", assetCount: 15, batch: "BT-2024-004" },
+                    { id: "5", name: "Yard E-22", lat: 51.4994, lng: -0.1156, status: "attention", assetCount: 9, batch: "BT-2024-005" }
+                  ]} 
+                />
                 <div className="flex items-center gap-4 mt-4 text-sm">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 rounded-full bg-success"></div>
