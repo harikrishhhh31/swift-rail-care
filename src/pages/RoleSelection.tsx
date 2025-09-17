@@ -94,37 +94,6 @@ const RoleSelection = () => {
             })}
           </div>
 
-          {/* Features Preview */}
-          <div className="mt-16 grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="bg-success/10 text-success p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <BarChart3 className="h-6 w-6" />
-              </div>
-              <h3 className="font-semibold mb-1">Predictive Analytics</h3>
-              <p className="text-sm text-muted-foreground">AI-powered maintenance predictions</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-warning/10 text-warning p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <MapPin className="h-6 w-6" />
-              </div>
-              <h3 className="font-semibold mb-1">Location Mapping</h3>
-              <p className="text-sm text-muted-foreground">Interactive site visualization</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-primary/10 text-primary p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <Shield className="h-6 w-6" />
-              </div>
-              <h3 className="font-semibold mb-1">Asset Tracking</h3>
-              <p className="text-sm text-muted-foreground">Complete asset lifecycle management</p>
-            </div>
-            <div className="text-center">
-              <div className="bg-critical/10 text-critical p-3 rounded-full w-12 h-12 flex items-center justify-center mx-auto mb-3">
-                <Wrench className="h-6 w-6" />
-              </div>
-              <h3 className="font-semibold mb-1">Smart Scheduling</h3>
-              <p className="text-sm text-muted-foreground">Automated maintenance calendars</p>
-            </div>
-          </div>
         </div>
       </main>
     </div>
